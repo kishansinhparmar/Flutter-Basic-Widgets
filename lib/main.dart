@@ -14,8 +14,9 @@ class MyApp extends StatelessWidget {
         routes: <String, WidgetBuilder>{
           ContainerDemo.routeName: (BuildContext context) =>
               new ContainerDemo(),
-          "/rowcolumn": (BuildContext context) => new RowColumnDemo(),
-          "/image": (BuildContext context) => new ImageDemo(),
+          RowColumnDemo.routeName: (BuildContext context) =>
+              new RowColumnDemo(),
+          ImageDemo.routeName: (BuildContext context) => new ImageDemo(),
         },
         home: new MyHome());
   }
@@ -47,7 +48,8 @@ class _MyHomeState extends State<MyHome> {
                 // Navigator.of(context).push(new MaterialPageRoute(
                 // builder: (BuildContext context) => new ContainerDemo()));
               },
-              child: new Text("Container"),
+              child: new Text("Container",
+                  style: Theme.of(context).textTheme.title),
             ),
           ),
           new Padding(
@@ -55,13 +57,14 @@ class _MyHomeState extends State<MyHome> {
             child: new RaisedButton(
               onPressed: () {
                 //It only works if route properties set on materialapp class #play
-                Navigator.of(context).pushNamed("/rowcolumn");
+                Navigator.of(context).pushNamed(RowColumnDemo.routeName);
 
                 //This code no need to write routes in materialapp class #play
                 // Navigator.of(context).push(new MaterialPageRoute(
                 // builder: (BuildContext context) => new ContainerDemo()));
               },
-              child: new Text("Row-Column"),
+              child: new Text("Row-Column",
+                  style: Theme.of(context).textTheme.title),
             ),
           ),
           new Padding(
@@ -69,13 +72,14 @@ class _MyHomeState extends State<MyHome> {
             child: new RaisedButton(
               onPressed: () {
                 //It only works if route properties set on materialapp class #play
-                Navigator.of(context).pushNamed("/image");
+                Navigator.of(context).pushNamed(ImageDemo.routeName);
 
                 //This code no need to write routes in materialapp class #play
                 // Navigator.of(context).push(new MaterialPageRoute(
                 // builder: (BuildContext context) => new ContainerDemo()));
               },
-              child: new Text("Image"),
+              child:
+                  new Text("Image", style: Theme.of(context).textTheme.title),
             ),
           )
         ],
