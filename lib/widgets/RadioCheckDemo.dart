@@ -11,66 +11,69 @@ class _RadioCheckDemoState extends State<RadioCheckDemo> {
   bool _musicValue = false;
   bool _sportValue = false;
   bool _readingValue = false;
+  String _genderSelection = "MALE";
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Radio-CheckBox"),
+        title: Text("Radio | CheckBox"),
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(4.0),
-        child: Column(children: <Widget>[
-          RadioListTile(
-            title: Text("MALE"),
-            value: 0,
-            groupValue: _groupValue,
-            onChanged: (value) {
-              setState(() {
-                _groupValue = value;
-              });
-            },
-          ),
-          RadioListTile(
-            title: Text("FEMALE"),
-            value: 1,
-            groupValue: _groupValue,
-            onChanged: (value) {
-              setState(() {
-                _groupValue = value;
-              });
-            },
-          ),
-
-          CheckboxListTile(
-            title: Text("MUSIC"),
-            value: _musicValue,
-            onChanged: (flag) {
-              setState(() {
-                _musicValue = flag;
-              });
-            },
-          ),
-          CheckboxListTile(
-            title: Text("SPORT"),
-            value: _sportValue,
-            onChanged: (flag) {
-              setState(() {
-                _sportValue = flag;
-              });
-            },
-          ),
-          CheckboxListTile(
-            title: Text("READING"),
-            value: _readingValue,
-            onChanged: (flag) {
-              setState(() {
-                _readingValue = flag;
-              });
-            },
-          )
-        ]),
-      ),
+      body: Column(children: <Widget>[
+        RadioListTile(
+          title: Text("MALE"),
+          value: 0,
+          groupValue: _groupValue,
+          onChanged: (value) {
+            setState(() {
+              _groupValue = value;
+              _genderSelection = "MALE";
+            });
+          },
+        ),
+        RadioListTile(
+          title: Text("FEMALE"),
+          value: 1,
+          groupValue: _groupValue,
+          onChanged: (value) {
+            setState(() {
+              _groupValue = value;
+              _genderSelection = "FEMALE";
+            });
+          },
+        ),
+        CheckboxListTile(
+          title: Text("MUSIC"),
+          value: _musicValue,
+          onChanged: (flag) {
+            setState(() {
+              _musicValue = flag;
+            });
+          },
+        ),
+        CheckboxListTile(
+          title: Text("SPORT"),
+          value: _sportValue,
+          onChanged: (flag) {
+            setState(() {
+              _sportValue = flag;
+            });
+          },
+        ),
+        CheckboxListTile(
+          title: Text("READING"),
+          value: _readingValue,
+          onChanged: (flag) {
+            setState(() {
+              _readingValue = flag;
+            });
+          },
+        ),
+        Text(_genderSelection),
+        Text("Music " + (_musicValue ? " cheked" : " uncheck")),
+        Text("Sport " + (_sportValue ? " cheked" : " uncheck")),
+        Text("Reading " + (_readingValue ? " cheked" : " uncheck")),
+      ]),
     );
   }
 }

@@ -21,38 +21,37 @@ class _TextFieldDemoState extends State<TextFieldDemo> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text("TextField Demo")),
-      body: Padding(
-          padding: const EdgeInsets.all(16.0),
-          child: Column(
-            children: <Widget>[
-              Theme(
-                data:
-                    Theme.of(context).copyWith(primaryColor: Colors.blueAccent),
-                child: TextField(
-                  controller: _txtNameCtrl,
-                  decoration: InputDecoration(
-                      labelText: "Type", border: OutlineInputBorder()),
-                ),
+      body: SafeArea(
+          child: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Column(
+          children: <Widget>[
+            Theme(
+              data: Theme.of(context).copyWith(primaryColor: Colors.black),
+              child: TextField(
+                controller: _txtNameCtrl,
+                decoration: InputDecoration(
+                    labelText: "Type", border: OutlineInputBorder()),
               ),
-              Padding(
-                padding: const EdgeInsets.all(4.0),
-                child: Text(
-                  _lblText,
-                  style: Theme.of(context).textTheme.title,
-                ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(4.0),
+              child: Text(
+                _lblText,
+                style: Theme.of(context).textTheme.title,
               ),
-              RaisedButton(
-                child: Text("GET TEXT"),
-                onPressed: () {
-                  setState(() {
-                    _lblText = _txtNameCtrl.text;
-                  });
-                },
-              )
-            ],
-          )),
+            ),
+            RaisedButton(
+              child: Text("GET TEXT"),
+              onPressed: () {
+                setState(() {
+                  _lblText = _txtNameCtrl.text;
+                });
+              },
+            )
+          ],
+        ),
+      )),
     );
-    body:
-    ;
   }
 }

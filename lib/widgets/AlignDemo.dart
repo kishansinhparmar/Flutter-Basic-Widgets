@@ -4,7 +4,7 @@ class AlignDemo extends StatefulWidget {
   static final String routeName = "/alignDemo";
 
   @override
-  _AlignDemoState createState() => new _AlignDemoState();
+  _AlignDemoState createState() => _AlignDemoState();
 }
 
 class _AlignDemoState extends State<AlignDemo> {
@@ -12,7 +12,7 @@ class _AlignDemoState extends State<AlignDemo> {
   Widget build(BuildContext context) {
     return Align(
       alignment: FractionalOffset.centerRight,
-      child: new Text("Text"),
+      child: Text("Text"),
     );
   }
 }

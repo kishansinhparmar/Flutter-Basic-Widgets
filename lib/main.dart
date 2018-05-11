@@ -7,6 +7,7 @@ import 'package:flutter_basic_widgets/widgets/TextFieldDemo.dart';
 import 'package:flutter_basic_widgets/widgets/AlignDemo.dart';
 import 'package:flutter_basic_widgets/widgets/IndexedStackDemo.dart';
 import 'package:flutter_basic_widgets/widgets/RadioCheckDemo.dart';
+import 'package:flutter_basic_widgets/widgets/FlexDemo.dart';
 import 'colors.dart';
 
 void main() => runApp(new MyApp());
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
     return new MaterialApp(
         debugShowCheckedModeBanner: false,
         title: _appName,
-        theme: _defaultTheme,
+        theme: _buildThemeData(),
         routes: <String, WidgetBuilder>{
           ContainerDemo.routeName: (BuildContext context) =>
               new ContainerDemo(),
@@ -33,6 +34,7 @@ class MyApp extends StatelessWidget {
               new IndexedStackDemo(),
           RadioCheckDemo.routeName: (BuildContext context) =>
               new RadioCheckDemo(),
+          FlexDemo.routeName: (BuildContext context) => new FlexDemo(),
         },
         home: new MyHome());
   }
@@ -172,6 +174,21 @@ class _MyHomeState extends State<MyHome> {
               child: new Text("Radio-Check",
                   style: Theme.of(context).textTheme.subhead),
             ),
+          ),
+          new Padding(
+            padding: const EdgeInsets.all(4.0),
+            child: new RaisedButton(
+              onPressed: () {
+                //It only works if route properties set on materialapp class #play
+                Navigator.of(context).pushNamed(FlexDemo.routeName);
+
+                //This code no need to write routes in materialapp class #play
+                // Navigator.of(context).push(new MaterialPageRoute(
+                // builder: (BuildContext context) => new ContainerDemo()));
+              },
+              child:
+                  new Text("Flex", style: Theme.of(context).textTheme.subhead),
+            ),
           )
         ],
       ),
@@ -179,14 +196,21 @@ class _MyHomeState extends State<MyHome> {
   }
 }
 
-ThemeData _defaultTheme = new ThemeData(
-  primaryColor: kPrimary,
-  primaryColorDark: kPrimaryDark,
-  primaryColorLight: kPrimaryLight,
-  accentColor: kAccentColor,
-  scaffoldBackgroundColor: kScaffoldBackgroundColor,
-  dividerColor: kDividerColor,
-  bottomAppBarColor: kBottomAppBarColor,
-);
+ThemeData _buildThemeData() {
+  ThemeData.light();
+  return new ThemeData(
+      primaryColor: kPrimary,
+      primaryColorDark: kPrimaryDark,
+      primaryColorLight: kPrimaryLight,
+      accentColor: kAccentColor,
+      scaffoldBackgroundColor: kScaffoldBackgroundColor,
+      dividerColor: kDividerColor,
+      bottomAppBarColor: kBottomAppBarColor,
+      buttonTheme: _buildButtonTheme());
+}
+
+_buildButtonTheme() {
+  return ButtonThemeData(textTheme: ButtonTextTheme.accent);
+}
 
 String _appName = "Basic Flutter Widgets";
