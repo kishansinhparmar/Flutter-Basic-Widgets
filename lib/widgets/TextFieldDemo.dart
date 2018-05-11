@@ -20,28 +20,39 @@ class _TextFieldDemoState extends State<TextFieldDemo> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(title: Text("TextField Demo")),
-        body: Column(
-          children: <Widget>[
-            TextField(
-              controller: _txtNameCtrl,
-            ),
-            Padding(
-              padding: const EdgeInsets.all(4.0),
-              child: Text(
-                _lblText,
-                style: Theme.of(context).textTheme.title,
+      appBar: AppBar(title: Text("TextField Demo")),
+      body: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Column(
+            children: <Widget>[
+              Theme(
+                data:
+                    Theme.of(context).copyWith(primaryColor: Colors.blueAccent),
+                child: TextField(
+                  controller: _txtNameCtrl,
+                  decoration: InputDecoration(
+                      labelText: "Type", border: OutlineInputBorder()),
+                ),
               ),
-            ),
-            RaisedButton(
-              child: Text("GET TEXT"),
-              onPressed: () {
-                setState(() {
-                  _lblText = _txtNameCtrl.text;
-                });
-              },
-            )
-          ],
-        ));
+              Padding(
+                padding: const EdgeInsets.all(4.0),
+                child: Text(
+                  _lblText,
+                  style: Theme.of(context).textTheme.title,
+                ),
+              ),
+              RaisedButton(
+                child: Text("GET TEXT"),
+                onPressed: () {
+                  setState(() {
+                    _lblText = _txtNameCtrl.text;
+                  });
+                },
+              )
+            ],
+          )),
+    );
+    body:
+    ;
   }
 }
