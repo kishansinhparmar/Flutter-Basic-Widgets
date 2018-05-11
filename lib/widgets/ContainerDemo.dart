@@ -6,12 +6,12 @@ class ContainerDemo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     //Try GestureDetector() class to detect gestures
-    return new Container(
+    return Container(
         color: Colors.red,
         //Change fraction or commet the properti #play
         // alignment: FractionalOffset.center,
         padding: const EdgeInsets.all(32.0),
-        child: new Container(
+        child: Container(
           color: Colors.yellow,
 
           //change or comment height and width #play
@@ -19,7 +19,7 @@ class ContainerDemo extends StatelessWidget {
           // height: 200.0,
 
           //comment child if parent container has no alignment #play
-          child: new Text(
+          child: Text(
             "Hello World!",
             textDirection: TextDirection.ltr,
           ),

@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_basic_widgets/widgets/ContainerDemo.dart';
 import 'package:flutter_basic_widgets/widgets/RowColumnDemo.dart';
+import 'package:flutter_basic_widgets/widgets/RowColumnPro.dart';
 import 'package:flutter_basic_widgets/widgets/ImageDemo.dart';
 import 'package:flutter_basic_widgets/widgets/TextFieldDemo.dart';
 import 'package:flutter_basic_widgets/widgets/AlignDemo.dart';
 import 'package:flutter_basic_widgets/widgets/IndexedStackDemo.dart';
+import 'package:flutter_basic_widgets/widgets/RadioCheckDemo.dart';
+import 'colors.dart';
 
 void main() => runApp(new MyApp());
 
@@ -20,12 +23,16 @@ class MyApp extends StatelessWidget {
               new ContainerDemo(),
           RowColumnDemo.routeName: (BuildContext context) =>
               new RowColumnDemo(),
+          RowColumnProDemo.routeName: (BuildContext context) =>
+              new RowColumnProDemo(),
           ImageDemo.routeName: (BuildContext context) => new ImageDemo(),
           TextFieldDemo.routeName: (BuildContext context) =>
               new TextFieldDemo(),
           AlignDemo.routeName: (BuildContext context) => new AlignDemo(),
           IndexedStackDemo.routeName: (BuildContext context) =>
               new IndexedStackDemo(),
+          RadioCheckDemo.routeName: (BuildContext context) =>
+              new RadioCheckDemo(),
         },
         home: new MyHome());
   }
@@ -58,7 +65,7 @@ class _MyHomeState extends State<MyHome> {
                 // builder: (BuildContext context) => new ContainerDemo()));
               },
               child: new Text("Container",
-                  style: Theme.of(context).textTheme.title),
+                  style: Theme.of(context).textTheme.subhead),
             ),
           ),
           new Padding(
@@ -73,7 +80,22 @@ class _MyHomeState extends State<MyHome> {
                 // builder: (BuildContext context) => new ContainerDemo()));
               },
               child: new Text("Row-Column",
-                  style: Theme.of(context).textTheme.title),
+                  style: Theme.of(context).textTheme.subhead),
+            ),
+          ),
+          new Padding(
+            padding: const EdgeInsets.all(4.0),
+            child: new RaisedButton(
+              onPressed: () {
+                //It only works if route properties set on materialapp class #play
+                Navigator.of(context).pushNamed(RowColumnProDemo.routeName);
+
+                //This code no need to write routes in materialapp class #play
+                // Navigator.of(context).push(new MaterialPageRoute(
+                // builder: (BuildContext context) => new ContainerDemo()));
+              },
+              child: new Text("Row-Column mainAxis",
+                  style: Theme.of(context).textTheme.subhead),
             ),
           ),
           new Padding(
@@ -88,7 +110,7 @@ class _MyHomeState extends State<MyHome> {
                 // builder: (BuildContext context) => new ContainerDemo()));
               },
               child:
-                  new Text("Image", style: Theme.of(context).textTheme.title),
+                  new Text("Image", style: Theme.of(context).textTheme.subhead),
             ),
           ),
           new Padding(
@@ -103,7 +125,7 @@ class _MyHomeState extends State<MyHome> {
                 // builder: (BuildContext context) => new ContainerDemo()));
               },
               child: new Text("TextField",
-                  style: Theme.of(context).textTheme.title),
+                  style: Theme.of(context).textTheme.subhead),
             ),
           ),
           new Padding(
@@ -118,7 +140,7 @@ class _MyHomeState extends State<MyHome> {
                 // builder: (BuildContext context) => new ContainerDemo()));
               },
               child:
-                  new Text("Align", style: Theme.of(context).textTheme.title),
+                  new Text("Align", style: Theme.of(context).textTheme.subhead),
             ),
           ),
           new Padding(
@@ -133,7 +155,22 @@ class _MyHomeState extends State<MyHome> {
                 // builder: (BuildContext context) => new ContainerDemo()));
               },
               child: new Text("IndexedStack",
-                  style: Theme.of(context).textTheme.title),
+                  style: Theme.of(context).textTheme.subhead),
+            ),
+          ),
+          new Padding(
+            padding: const EdgeInsets.all(4.0),
+            child: new RaisedButton(
+              onPressed: () {
+                //It only works if route properties set on materialapp class #play
+                Navigator.of(context).pushNamed(RadioCheckDemo.routeName);
+
+                //This code no need to write routes in materialapp class #play
+                // Navigator.of(context).push(new MaterialPageRoute(
+                // builder: (BuildContext context) => new ContainerDemo()));
+              },
+              child: new Text("Radio-Check",
+                  style: Theme.of(context).textTheme.subhead),
             ),
           )
         ],
@@ -142,12 +179,14 @@ class _MyHomeState extends State<MyHome> {
   }
 }
 
-// ThemeData _defaultTheme = new ThemeData(
-//     primarySwatch: Colors.blueGrey,
-//     accentColor: Colors.deepOrangeAccent,
-//     buttonColor: Colors.deepOrangeAccent,
-//     brightness: Brightness.dark);
-
-ThemeData _defaultTheme = new ThemeData(brightness: Brightness.light);
+ThemeData _defaultTheme = new ThemeData(
+  primaryColor: kPrimary,
+  primaryColorDark: kPrimaryDark,
+  primaryColorLight: kPrimaryLight,
+  accentColor: kAccentColor,
+  scaffoldBackgroundColor: kScaffoldBackgroundColor,
+  dividerColor: kDividerColor,
+  bottomAppBarColor: kBottomAppBarColor,
+);
 
 String _appName = "Basic Flutter Widgets";

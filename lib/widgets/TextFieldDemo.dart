@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class TextFieldDemo extends StatefulWidget {
   static final String routeName = "/textField";
   @override
-  _TextFieldDemoState createState() => new _TextFieldDemoState();
+  _TextFieldDemoState createState() => _TextFieldDemoState();
 }
 
 class _TextFieldDemoState extends State<TextFieldDemo> {
@@ -14,27 +14,27 @@ class _TextFieldDemoState extends State<TextFieldDemo> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    _txtNameCtrl = new TextEditingController();
+    _txtNameCtrl = TextEditingController();
   }
 
   @override
   Widget build(BuildContext context) {
-    return new Scaffold(
-        appBar: new AppBar(title: new Text("TextField Demo")),
-        body: new Column(
+    return Scaffold(
+        appBar: AppBar(title: Text("TextField Demo")),
+        body: Column(
           children: <Widget>[
-            new TextField(
+            TextField(
               controller: _txtNameCtrl,
             ),
-            new Padding(
+            Padding(
               padding: const EdgeInsets.all(4.0),
-              child: new Text(
+              child: Text(
                 _lblText,
                 style: Theme.of(context).textTheme.title,
               ),
             ),
-            new RaisedButton(
-              child: new Text("GET TEXT"),
+            RaisedButton(
+              child: Text("GET TEXT"),
               onPressed: () {
                 setState(() {
                   _lblText = _txtNameCtrl.text;

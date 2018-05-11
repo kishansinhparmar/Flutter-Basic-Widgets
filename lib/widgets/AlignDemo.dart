@@ -10,9 +10,9 @@ class AlignDemo extends StatefulWidget {
 class _AlignDemoState extends State<AlignDemo> {
   @override
   Widget build(BuildContext context) {
-    return new Align(
-      alignment: FractionalOffset.topCenter,
-      child: new Text("data"),
+    return Align(
+      alignment: FractionalOffset.centerRight,
+      child: new Text("Text"),
     );
   }
 }

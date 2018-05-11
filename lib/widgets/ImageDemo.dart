@@ -6,8 +6,8 @@ class ImageDemo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: new AppBar(
-        title: new Text("Image demo"),
+      appBar: AppBar(
+        title: Text("Image demo"),
       ),
       body: new GridView.count(
         primary: false,
@@ -15,21 +15,21 @@ class ImageDemo extends StatelessWidget {
         crossAxisSpacing: 10.0,
         crossAxisCount: 2,
         children: <Widget>[
-          new Image.network(
+          Image.network(
               "https://raw.githubusercontent.com/flutter/website/master/_includes/code/layout/lakes/images/lake.jpg"),
-          new Image.network(
+          Image.network(
               "https://photojournal.jpl.nasa.gov/jpeg/PIA19048.jpg"),
-          new Image.network(
+          Image.network(
               "https://raw.githubusercontent.com/flutter/website/master/_includes/code/layout/lakes/images/lake.jpg"),
-          new Image.network(
+          Image.network(
               "https://photojournal.jpl.nasa.gov/jpeg/PIA19048.jpg"),
-          new Image.network(
+          Image.network(
               "https://raw.githubusercontent.com/flutter/website/master/_includes/code/layout/lakes/images/lake.jpg"),
-          new Image.network(
+          Image.network(
               "https://raw.githubusercontent.com/flutter/website/master/_includes/code/layout/lakes/images/lake.jpg"),
-          new Image.network(
+          Image.network(
               "https://raw.githubusercontent.com/flutter/website/master/_includes/code/layout/lakes/images/lake.jpg"),
-          new Image.network(
+          Image.network(
               "https://raw.githubusercontent.com/flutter/website/master/_includes/code/layout/lakes/images/lake.jpg"),
         ],
       ),
