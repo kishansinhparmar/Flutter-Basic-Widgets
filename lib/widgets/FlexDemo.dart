@@ -14,16 +14,8 @@ class _FlexDemoState extends State<FlexDemo> {
         title: Text("Flex"),
       ),
       body: SafeArea(
-        child: Flex(
-          direction: Axis.horizontal,
-          children: <Widget>[
-            Text("Text-1"),
-            Text("Text-2"),
-            Flex(
-              direction: Axis.vertical,
-              children: <Widget>[Text("Text-3"), Text("Text-4")],
-            )
-          ],
+        child: Center(
+          child: Text("Need clear flex example"),
         ),
       ),
     );

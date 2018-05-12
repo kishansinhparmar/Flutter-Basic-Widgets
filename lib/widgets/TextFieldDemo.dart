@@ -31,7 +31,8 @@ class _TextFieldDemoState extends State<TextFieldDemo> {
               child: TextField(
                 controller: _txtNameCtrl,
                 decoration: InputDecoration(
-                    labelText: "Type", border: OutlineInputBorder()),
+                  hintText: "Type your name",
+                    labelText: "First Name", border: OutlineInputBorder()),
               ),
             ),
             Padding(

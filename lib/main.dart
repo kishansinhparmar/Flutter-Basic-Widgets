@@ -66,8 +66,7 @@ class _MyHomeState extends State<MyHome> {
                 // Navigator.of(context).push(new MaterialPageRoute(
                 // builder: (BuildContext context) => new ContainerDemo()));
               },
-              child: new Text("Container",
-                  style: Theme.of(context).textTheme.subhead),
+              child: new Text("Container"),
             ),
           ),
           new Padding(
@@ -81,8 +80,7 @@ class _MyHomeState extends State<MyHome> {
                 // Navigator.of(context).push(new MaterialPageRoute(
                 // builder: (BuildContext context) => new ContainerDemo()));
               },
-              child: new Text("Row-Column",
-                  style: Theme.of(context).textTheme.subhead),
+              child: new Text("Row-Column"),
             ),
           ),
           new Padding(
@@ -96,8 +94,7 @@ class _MyHomeState extends State<MyHome> {
                 // Navigator.of(context).push(new MaterialPageRoute(
                 // builder: (BuildContext context) => new ContainerDemo()));
               },
-              child: new Text("Row-Column mainAxis",
-                  style: Theme.of(context).textTheme.subhead),
+              child: new Text("Row-Column mainAxis"),
             ),
           ),
           new Padding(
@@ -111,8 +108,7 @@ class _MyHomeState extends State<MyHome> {
                 // Navigator.of(context).push(new MaterialPageRoute(
                 // builder: (BuildContext context) => new ContainerDemo()));
               },
-              child:
-                  new Text("Image", style: Theme.of(context).textTheme.subhead),
+              child: new Text("Image"),
             ),
           ),
           new Padding(
@@ -126,8 +122,7 @@ class _MyHomeState extends State<MyHome> {
                 // Navigator.of(context).push(new MaterialPageRoute(
                 // builder: (BuildContext context) => new ContainerDemo()));
               },
-              child: new Text("TextField",
-                  style: Theme.of(context).textTheme.subhead),
+              child: new Text("TextField"),
             ),
           ),
           new Padding(
@@ -141,8 +136,7 @@ class _MyHomeState extends State<MyHome> {
                 // Navigator.of(context).push(new MaterialPageRoute(
                 // builder: (BuildContext context) => new ContainerDemo()));
               },
-              child:
-                  new Text("Align", style: Theme.of(context).textTheme.subhead),
+              child: new Text("Align"),
             ),
           ),
           new Padding(
@@ -156,8 +150,7 @@ class _MyHomeState extends State<MyHome> {
                 // Navigator.of(context).push(new MaterialPageRoute(
                 // builder: (BuildContext context) => new ContainerDemo()));
               },
-              child: new Text("IndexedStack",
-                  style: Theme.of(context).textTheme.subhead),
+              child: new Text("IndexedStack"),
             ),
           ),
           new Padding(
@@ -171,8 +164,7 @@ class _MyHomeState extends State<MyHome> {
                 // Navigator.of(context).push(new MaterialPageRoute(
                 // builder: (BuildContext context) => new ContainerDemo()));
               },
-              child: new Text("Radio-Check",
-                  style: Theme.of(context).textTheme.subhead),
+              child: new Text("Radio-Check"),
             ),
           ),
           new Padding(
@@ -186,8 +178,7 @@ class _MyHomeState extends State<MyHome> {
                 // Navigator.of(context).push(new MaterialPageRoute(
                 // builder: (BuildContext context) => new ContainerDemo()));
               },
-              child:
-                  new Text("Flex", style: Theme.of(context).textTheme.subhead),
+              child: new Text("Flex"),
             ),
           )
         ],
