@@ -8,6 +8,7 @@ import 'package:flutter_basic_widgets/widgets/AlignDemo.dart';
 import 'package:flutter_basic_widgets/widgets/IndexedStackDemo.dart';
 import 'package:flutter_basic_widgets/widgets/RadioCheckDemo.dart';
 import 'package:flutter_basic_widgets/widgets/FlexDemo.dart';
+import 'package:flutter_basic_widgets/widgets/BottomTabDemo.dart';
 import 'colors.dart';
 
 void main() => runApp(new MyApp());
@@ -15,10 +16,11 @@ void main() => runApp(new MyApp());
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    ThemeData base = ThemeData.light();
     return new MaterialApp(
         debugShowCheckedModeBanner: false,
         title: _appName,
-        theme: _buildThemeData(),
+        theme: _buildThemeData(base),
         routes: <String, WidgetBuilder>{
           ContainerDemo.routeName: (BuildContext context) =>
               new ContainerDemo(),
@@ -35,6 +37,8 @@ class MyApp extends StatelessWidget {
           RadioCheckDemo.routeName: (BuildContext context) =>
               new RadioCheckDemo(),
           FlexDemo.routeName: (BuildContext context) => new FlexDemo(),
+          BottomTabDemo.routeName: (BuildContext context) =>
+              new BottomTabDemo(),
         },
         home: new MyHome());
   }
@@ -180,6 +184,20 @@ class _MyHomeState extends State<MyHome> {
               },
               child: new Text("Flex"),
             ),
+          ),
+          new Padding(
+            padding: const EdgeInsets.all(4.0),
+            child: new RaisedButton(
+              onPressed: () {
+                //It only works if route properties set on materialapp class #play
+                Navigator.of(context).pushNamed(BottomTabDemo.routeName);
+
+                //This code no need to write routes in materialapp class #play
+                // Navigator.of(context).push(new MaterialPageRoute(
+                // builder: (BuildContext context) => new ContainerDemo()));
+              },
+              child: new Text("BottomTab"),
+            ),
           )
         ],
       ),
@@ -187,13 +205,13 @@ class _MyHomeState extends State<MyHome> {
   }
 }
 
-ThemeData _buildThemeData() {
-  ThemeData.light();
+ThemeData _buildThemeData(ThemeData base) {
   return new ThemeData(
       primaryColor: kPrimary,
       primaryColorDark: kPrimaryDark,
       primaryColorLight: kPrimaryLight,
       accentColor: kAccentColor,
+      // iconTheme: base.iconTheme.copyWith(color: Colors.red),
       scaffoldBackgroundColor: kScaffoldBackgroundColor,
       dividerColor: kDividerColor,
       bottomAppBarColor: kBottomAppBarColor,
