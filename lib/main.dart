@@ -9,6 +9,7 @@ import 'package:flutter_basic_widgets/widgets/IndexedStackDemo.dart';
 import 'package:flutter_basic_widgets/widgets/RadioCheckDemo.dart';
 import 'package:flutter_basic_widgets/widgets/FlexDemo.dart';
 import 'package:flutter_basic_widgets/widgets/BottomTabDemo.dart';
+import 'package:flutter_basic_widgets/widgets/ExpandableListDemo.dart';
 import 'colors.dart';
 
 void main() => runApp(new MyApp());
@@ -39,6 +40,8 @@ class MyApp extends StatelessWidget {
           FlexDemo.routeName: (BuildContext context) => new FlexDemo(),
           BottomTabDemo.routeName: (BuildContext context) =>
               new BottomTabDemo(),
+          ExpandableListDemo.routeName: (BuildContext context) =>
+              new ExpandableListDemo(),
         },
         home: new MyHome());
   }
@@ -58,148 +61,7 @@ class _MyHomeState extends State<MyHome> {
       ),
       body: new ListView(
         padding: const EdgeInsets.all(4.0),
-        children: <Widget>[
-          new Padding(
-            padding: const EdgeInsets.all(4.0),
-            child: new RaisedButton(
-              onPressed: () {
-                //It only works if route properties set on materialapp class #play
-                Navigator.of(context).pushNamed(ContainerDemo.routeName);
-
-                //This code no need to write routes in materialapp class #play
-                // Navigator.of(context).push(new MaterialPageRoute(
-                // builder: (BuildContext context) => new ContainerDemo()));
-              },
-              child: new Text("Container"),
-            ),
-          ),
-          new Padding(
-            padding: const EdgeInsets.all(4.0),
-            child: new RaisedButton(
-              onPressed: () {
-                //It only works if route properties set on materialapp class #play
-                Navigator.of(context).pushNamed(RowColumnDemo.routeName);
-
-                //This code no need to write routes in materialapp class #play
-                // Navigator.of(context).push(new MaterialPageRoute(
-                // builder: (BuildContext context) => new ContainerDemo()));
-              },
-              child: new Text("Row-Column"),
-            ),
-          ),
-          new Padding(
-            padding: const EdgeInsets.all(4.0),
-            child: new RaisedButton(
-              onPressed: () {
-                //It only works if route properties set on materialapp class #play
-                Navigator.of(context).pushNamed(RowColumnProDemo.routeName);
-
-                //This code no need to write routes in materialapp class #play
-                // Navigator.of(context).push(new MaterialPageRoute(
-                // builder: (BuildContext context) => new ContainerDemo()));
-              },
-              child: new Text("Row-Column mainAxis"),
-            ),
-          ),
-          new Padding(
-            padding: const EdgeInsets.all(4.0),
-            child: new RaisedButton(
-              onPressed: () {
-                //It only works if route properties set on materialapp class #play
-                Navigator.of(context).pushNamed(ImageDemo.routeName);
-
-                //This code no need to write routes in materialapp class #play
-                // Navigator.of(context).push(new MaterialPageRoute(
-                // builder: (BuildContext context) => new ContainerDemo()));
-              },
-              child: new Text("Image"),
-            ),
-          ),
-          new Padding(
-            padding: const EdgeInsets.all(4.0),
-            child: new RaisedButton(
-              onPressed: () {
-                //It only works if route properties set on materialapp class #play
-                Navigator.of(context).pushNamed(TextFieldDemo.routeName);
-
-                //This code no need to write routes in materialapp class #play
-                // Navigator.of(context).push(new MaterialPageRoute(
-                // builder: (BuildContext context) => new ContainerDemo()));
-              },
-              child: new Text("TextField"),
-            ),
-          ),
-          new Padding(
-            padding: const EdgeInsets.all(4.0),
-            child: new RaisedButton(
-              onPressed: () {
-                //It only works if route properties set on materialapp class #play
-                Navigator.of(context).pushNamed(AlignDemo.routeName);
-
-                //This code no need to write routes in materialapp class #play
-                // Navigator.of(context).push(new MaterialPageRoute(
-                // builder: (BuildContext context) => new ContainerDemo()));
-              },
-              child: new Text("Align"),
-            ),
-          ),
-          new Padding(
-            padding: const EdgeInsets.all(4.0),
-            child: new RaisedButton(
-              onPressed: () {
-                //It only works if route properties set on materialapp class #play
-                Navigator.of(context).pushNamed(IndexedStackDemo.routeName);
-
-                //This code no need to write routes in materialapp class #play
-                // Navigator.of(context).push(new MaterialPageRoute(
-                // builder: (BuildContext context) => new ContainerDemo()));
-              },
-              child: new Text("IndexedStack"),
-            ),
-          ),
-          new Padding(
-            padding: const EdgeInsets.all(4.0),
-            child: new RaisedButton(
-              onPressed: () {
-                //It only works if route properties set on materialapp class #play
-                Navigator.of(context).pushNamed(RadioCheckDemo.routeName);
-
-                //This code no need to write routes in materialapp class #play
-                // Navigator.of(context).push(new MaterialPageRoute(
-                // builder: (BuildContext context) => new ContainerDemo()));
-              },
-              child: new Text("Radio-Check"),
-            ),
-          ),
-          new Padding(
-            padding: const EdgeInsets.all(4.0),
-            child: new RaisedButton(
-              onPressed: () {
-                //It only works if route properties set on materialapp class #play
-                Navigator.of(context).pushNamed(FlexDemo.routeName);
-
-                //This code no need to write routes in materialapp class #play
-                // Navigator.of(context).push(new MaterialPageRoute(
-                // builder: (BuildContext context) => new ContainerDemo()));
-              },
-              child: new Text("Flex"),
-            ),
-          ),
-          new Padding(
-            padding: const EdgeInsets.all(4.0),
-            child: new RaisedButton(
-              onPressed: () {
-                //It only works if route properties set on materialapp class #play
-                Navigator.of(context).pushNamed(BottomTabDemo.routeName);
-
-                //This code no need to write routes in materialapp class #play
-                // Navigator.of(context).push(new MaterialPageRoute(
-                // builder: (BuildContext context) => new ContainerDemo()));
-              },
-              child: new Text("BottomTab"),
-            ),
-          )
-        ],
+        children: _getButtons(context),
       ),
     );
   }
@@ -223,3 +85,54 @@ _buildButtonTheme() {
 }
 
 String _appName = "Basic Flutter Widgets";
+
+_getButtons(BuildContext context) {
+  List<Widget> widgetList = List<Widget>();
+
+  var routes = [
+    ContainerDemo.routeName,
+    RowColumnDemo.routeName,
+    RowColumnProDemo.routeName,
+    ImageDemo.routeName,
+    TextFieldDemo.routeName,
+    AlignDemo.routeName,
+    IndexedStackDemo.routeName,
+    RadioCheckDemo.routeName,
+    FlexDemo.routeName,
+    BottomTabDemo.routeName,
+    ExpandableListDemo.routeName
+  ];
+
+  var btnNames = [
+    "ContainerDemo",
+    "RowColumnDemo",
+    "RowColumnProDemo",
+    "ImageDemo",
+    "TextFieldDemo",
+    "AlignDemo",
+    "IndexedStackDemo",
+    "RadioCheckDemo",
+    "FlexDemo",
+    "BottomTabDemo",
+    "ExpandableListDemo"
+  ];
+
+  for (int i = 0; i < routes.length; i++) {
+    widgetList.add(Padding(
+      padding: const EdgeInsets.all(4.0),
+      child: RaisedButton(
+        onPressed: () {
+          //It only works if route properties set on materialapp class #play
+          Navigator.of(context).pushNamed(routes[i]);
+
+          //This code no need to write routes in materialapp class #play
+          // Navigator.of(context).push(new MaterialPageRoute(
+          // builder: (BuildContext context) => new ContainerDemo()));
+        },
+        child: Text(btnNames[i]),
+      ),
+    ));
+  }
+
+  return widgetList;
+}
