@@ -31,8 +31,30 @@ class _TextFieldDemoState extends State<TextFieldDemo> {
               child: TextField(
                 controller: _txtNameCtrl,
                 decoration: InputDecoration(
-                  hintText: "Type your name",
-                    labelText: "First Name", border: OutlineInputBorder()),
+                    hintText: "Type your name",
+                    labelText: "First Name",
+                    border: OutlineInputBorder()),
+              ),
+            ),
+            new Padding(
+              padding: const EdgeInsets.symmetric(vertical: 8.0),
+              child: Theme(
+                data: Theme.of(context).copyWith(primaryColor: Colors.black),
+                child: TextField(
+                  controller: _txtNameCtrl,
+                  // decoration: ,
+                ),
+              ),
+            ),
+            new Padding(
+              padding: const EdgeInsets.symmetric(vertical: 4.0),
+              child: Theme(
+                data: Theme.of(context).copyWith(backgroundColor: Colors.white),
+                child: TextField(
+                  controller: _txtNameCtrl,
+                  decoration: new InputDecoration.collapsed(hintText: "Name"),
+                  // decoration: ,
+                ),
               ),
             ),
             Padding(
@@ -49,7 +71,7 @@ class _TextFieldDemoState extends State<TextFieldDemo> {
                   _lblText = _txtNameCtrl.text;
                 });
               },
-            )
+            ),
           ],
         ),
       )),

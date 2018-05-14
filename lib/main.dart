@@ -10,6 +10,8 @@ import 'package:flutter_basic_widgets/widgets/RadioCheckDemo.dart';
 import 'package:flutter_basic_widgets/widgets/FlexDemo.dart';
 import 'package:flutter_basic_widgets/widgets/BottomTabDemo.dart';
 import 'package:flutter_basic_widgets/widgets/ExpandableListDemo.dart';
+import 'package:flutter_basic_widgets/widgets/ButtonsDemo.dart';
+import 'package:flutter_basic_widgets/bonus/beebom/bhome.dart';
 import 'colors.dart';
 
 void main() => runApp(new MyApp());
@@ -42,8 +44,10 @@ class MyApp extends StatelessWidget {
               new BottomTabDemo(),
           ExpandableListDemo.routeName: (BuildContext context) =>
               new ExpandableListDemo(),
+          ButtonsDemo.routeName: (BuildContext context) => new ButtonsDemo(),
+          BHome.routeName: (BuildContext context) => new BHome(),
         },
-        home: new MyHome());
+        home: new ExpandableListDemo());
   }
 }
 

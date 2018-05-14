@@ -1,4 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_basic_widgets/widgets/ContainerDemo.dart';
+import 'package:flutter_basic_widgets/widgets/RowColumnDemo.dart';
+import 'package:flutter_basic_widgets/widgets/RowColumnPro.dart';
+import 'package:flutter_basic_widgets/widgets/ImageDemo.dart';
+import 'package:flutter_basic_widgets/widgets/TextFieldDemo.dart';
+import 'package:flutter_basic_widgets/widgets/AlignDemo.dart';
+import 'package:flutter_basic_widgets/widgets/IndexedStackDemo.dart';
+import 'package:flutter_basic_widgets/widgets/RadioCheckDemo.dart';
+import 'package:flutter_basic_widgets/widgets/FlexDemo.dart';
+import 'package:flutter_basic_widgets/widgets/BottomTabDemo.dart';
+import 'package:flutter_basic_widgets/widgets/ButtonsDemo.dart';
+import 'package:flutter_basic_widgets/bonus/beebom/bhome.dart';
 
 class ExpandableListDemo extends StatefulWidget {
   static final String routeName = "/expandabledemo";
@@ -11,11 +23,11 @@ class _ExpandableListDemoState extends State<ExpandableListDemo> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: new AppBar(
-        title: Text("ExpandableList Demo"),
+        title: Text("Basic Widgets | @imkishansinh"),
       ),
       body: new ListView.builder(
         itemBuilder: (BuildContext context, int index) =>
-            new EntryItem(data[index]),
+            new EntryItem(data[index], context),
         itemCount: data.length,
       ),
     );
@@ -24,9 +36,10 @@ class _ExpandableListDemoState extends State<ExpandableListDemo> {
 
 // One entry in the multilevel list displayed by this app.
 class Entry {
-  Entry(this.title, [this.children = const <Entry>[]]);
+  Entry(this.title, [this.routeName, this.children = const <Entry>[]]);
 
   final String title;
+  final String routeName;
   final List<Entry> children;
 }
 
@@ -34,46 +47,63 @@ class Entry {
 final List<Entry> data = <Entry>[
   new Entry(
     'Button Widgets',
+    '',
     <Entry>[
-      new Entry('Raised'),
-      new Entry('Flat'),
-      new Entry('Icon'),
+      new Entry('Raised', ButtonsDemo.routeName),
+      new Entry('Flat', ButtonsDemo.routeName),
+      new Entry('Icon', ButtonsDemo.routeName),
     ],
   ),
   new Entry(
     'Input Widgets',
+    '',
     <Entry>[
-      new Entry('TextField'),
-      new Entry('Radio Checkbox'),
+      new Entry('TextField', TextFieldDemo.routeName),
+      new Entry('Radio Checkbox', RadioCheckDemo.routeName),
     ],
   ),
   new Entry(
-    'Chapter C',
+    'Position layouts',
+    '',
     <Entry>[
-      new Entry('Section C0'),
-      new Entry('Section C1'),
-      new Entry(
-        'Section C2',
-        <Entry>[
-          new Entry('Item C2.0'),
-          new Entry('Item C2.1'),
-          new Entry('Item C2.2'),
-          new Entry('Item C2.3'),
-        ],
-      ),
+      new Entry('Container', ContainerDemo.routeName),
+      new Entry('Align', AlignDemo.routeName),
+      new Entry('Indexed', IndexedStackDemo.routeName),
+      new Entry('Flex', FlexDemo.routeName),
+      new Entry('RowColumn', RowColumnDemo.routeName),
+      new Entry('RowColumnPro', RowColumnProDemo.routeName),
     ],
   ),
+  new Entry(
+    'Other',
+    '',
+    <Entry>[
+      new Entry('BottomTab', BottomTabDemo.routeName),
+      new Entry('Image', ImageDemo.routeName),
+      new Entry('Image', BHome.routeName),
+    ],
+  )
 ];
 
 // Displays one Entry. If the entry has children then it's displayed
 // with an ExpansionTile.
 class EntryItem extends StatelessWidget {
-  const EntryItem(this.entry);
+  const EntryItem(this.entry, this.context);
+  final BuildContext context;
 
   final Entry entry;
 
   Widget _buildTiles(Entry root) {
-    if (root.children.isEmpty) return new ListTile(title: new Text(root.title));
+    if (root.children.isEmpty)
+      return new GestureDetector(
+          onTap: () {
+            // Navigator.of(context).push(MaterialPageRoute(
+            //     builder: (BuildContext context2) => ContainerDemo()));
+
+            Navigator.of(context).pushNamed(root.routeName);
+          },
+          child: new ListTile(title: new Text(root.title)));
+
     return new ExpansionTile(
       key: new PageStorageKey<Entry>(root),
       title: new Text(root.title),
