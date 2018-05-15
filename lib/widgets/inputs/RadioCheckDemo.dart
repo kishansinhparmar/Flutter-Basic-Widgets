@@ -79,6 +79,19 @@ class _RadioCheckDemoState extends State<RadioCheckDemo> {
             });
           },
         ),
+        SwitchListTile(
+          title: Text("Switch"),
+          value: _switchValue,
+          onChanged: (flag) {
+            setState(() {
+              _switchValue = flag;
+            });
+          },
+          activeThumbImage: new NetworkImage(
+              'https://developers.google.com/identity/images/g-logo.png'),
+          inactiveThumbImage: new NetworkImage(
+              'https://flutter.io/images/flutter-mark-square-100.png'),
+        ),
         Text(_genderSelection),
         Text(_switchValue ? "SWITCH ON" : "SWITCH OFF"),
         Text("Music " + (_musicValue ? " cheked" : " uncheck")),
@@ -86,5 +99,5 @@ class _RadioCheckDemoState extends State<RadioCheckDemo> {
         Text("Reading " + (_readingValue ? " cheked" : " uncheck")),
       ]),
     );
-  }  
+  }
 }

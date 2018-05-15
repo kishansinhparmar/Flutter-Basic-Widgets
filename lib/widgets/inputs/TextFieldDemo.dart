@@ -11,8 +11,6 @@ class _TextFieldDemoState extends State<TextFieldDemo> {
   TextEditingController _txtEmailCtrl;
   TextEditingController _txtPassCtrl;
   String _lblText = "";
-  String _lblEmailText = "";
-  String _lblPassText = "";
 
   @override
   void initState() {
