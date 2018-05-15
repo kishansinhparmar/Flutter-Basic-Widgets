@@ -38,7 +38,7 @@ class _BHomeClassState extends State<BHomeClass> {
                 child: Chip(
                   avatar: Icon(Icons.flash_on),
                   label: Text(
-                    "Chips",
+                    "Android",
                   ),
                 ),
               );

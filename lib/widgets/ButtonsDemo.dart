@@ -8,10 +8,11 @@ class ButtonsDemo extends StatefulWidget {
 
 class _ButtonsDemoState extends State<ButtonsDemo> {
   String _whichButtonClick = "";
-  List<DropdownMenuItem> _items = List<DropdownMenuItem>();
 
   @override
   Widget build(BuildContext context) {
+    List<DropdownMenuItem> _items = List<DropdownMenuItem>();
+
     for (int i = 0; i < 5; i++) {
       _items.add(DropdownMenuItem(
         child: Text("Item $i"),
@@ -19,7 +20,6 @@ class _ButtonsDemoState extends State<ButtonsDemo> {
       ));
     }
 
-    String _itemValue = "Item 0";
     return Scaffold(
         appBar: AppBar(
           title: Text("Buttons Demo"),
@@ -31,51 +31,85 @@ class _ButtonsDemoState extends State<ButtonsDemo> {
               child: Flex(
                 direction: Axis.vertical,
                 children: <Widget>[
-                  RaisedButton(
-                    onPressed: () {
-                      setState(() {
-                        _whichButtonClick = "RaisedButton";
-                      });
-                    },
-                    child: Text("RaisedButton Click"),
+                  Padding(
+                    padding: const EdgeInsets.all(4.0),
+                    child: RaisedButton(
+                      onPressed: () {
+                        setState(() {
+                          _whichButtonClick = "RaisedButton";
+                        });
+                      },
+                      child: Text("RAISED BUTTON"),
+                    ),
                   ),
-                  FlatButton(
-                    onPressed: () {
-                      setState(() {
-                        _whichButtonClick = "FlatButton";
-                      });
-                    },
-                    child: Text("Flat"),
+//Outline
+                  Padding(
+                    padding: const EdgeInsets.all(4.0),
+                    child: OutlineButton(
+                      onPressed: () {
+                        setState(() {
+                          _whichButtonClick = "OutlineButton";
+                        });
+                      },
+                      child: Text("OUTLINE BUTTON"),
+                    ),
                   ),
-                  IconButton(
-                    icon: Icon(Icons.send),
-                    onPressed: () {
-                      setState(() {
-                        _whichButtonClick = "IconButton";
-                      });
-                    },
+//Flat
+                  new Padding(
+                    padding: const EdgeInsets.all(4.0),
+                    child: FlatButton(
+                      onPressed: () {
+                        setState(() {
+                          _whichButtonClick = "FlatButton";
+                        });
+                      },
+                      child: Text("FLAT BUTTON"),
+                    ),
                   ),
-                  BackButton(),
-                  FloatingActionButton(
-                    child: Icon(Icons.add),
-                    onPressed: () {
-                      setState(() {
-                        _whichButtonClick = "FloatingButton";
-                      });
-                    },
+//icon
+                  Padding(
+                    padding: const EdgeInsets.all(4.0),
+                    child: IconButton(
+                      icon: Icon(Icons.send),
+                      onPressed: () {
+                        setState(() {
+                          _whichButtonClick = "IconButton";
+                        });
+                      },
+                    ),
                   ),
-                  DropdownButton(
-                    // hint: Text("Select"),
-                    value: _itemValue,
-                    items: _items,
-                    onChanged: (item) {
-                      setState(() {
-                        _itemValue = item;
-                        _whichButtonClick = item;
-                      });
-                    },
+//Back
+                  new Padding(
+                      padding: const EdgeInsets.all(4.0), child: BackButton()),
+//Floating
+                  new Padding(
+                    padding: const EdgeInsets.all(4.0),
+                    child: FloatingActionButton(
+                      child: Icon(Icons.add),
+                      onPressed: () {
+                        setState(() {
+                          _whichButtonClick = "FloatingButton";
+                        });
+                      },
+                    ),
                   ),
-                  Text(_whichButtonClick + " clicked..."),
+//Dropdown
+                  Padding(
+                    padding: const EdgeInsets.all(4.0),
+                    child: DropdownButton(
+                      // hint: Text("Select"),
+                      // value: _itemValue,
+                      items: _items,
+                      onChanged: (item) {
+                        setState(() {
+                          _whichButtonClick = item;
+                        });
+                      },
+                    ),
+                  ),
+                  new Padding(
+                      padding: const EdgeInsets.all(4.0),
+                      child: Text(_whichButtonClick + " clicked...")),
                 ],
               ),
             ),

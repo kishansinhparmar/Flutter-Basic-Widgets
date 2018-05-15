@@ -80,7 +80,13 @@ final List<Entry> data = <Entry>[
     <Entry>[
       new Entry('BottomTab', BottomTabDemo.routeName),
       new Entry('Image', ImageDemo.routeName),
-      new Entry('Image', BHome.routeName),
+    ],
+  ),
+  new Entry(
+    'Bonus',
+    '',
+    <Entry>[
+      new Entry('Beebom', BHome.routeName),
     ],
   )
 ];
