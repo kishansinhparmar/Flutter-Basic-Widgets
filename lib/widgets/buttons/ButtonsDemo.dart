@@ -7,19 +7,27 @@ class ButtonsDemo extends StatefulWidget {
 }
 
 class _ButtonsDemoState extends State<ButtonsDemo> {
-  String _whichButtonClick = "";
+  String _whichButtonClick;
+  List<DropdownMenuItem<String>> _items;
+  String _itemValue;
 
   @override
-  Widget build(BuildContext context) {
-    List<DropdownMenuItem> _items = List<DropdownMenuItem>();
-
+  void initState() {
+    _items = List<DropdownMenuItem<String>>();
     for (int i = 0; i < 5; i++) {
       _items.add(DropdownMenuItem(
         child: Text("Item $i"),
         value: "Item $i",
       ));
     }
+    _itemValue = _items[0].value;
+    _whichButtonClick = _items[0].value;
 
+    super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
           title: Text("Buttons Demo"),
@@ -66,7 +74,7 @@ class _ButtonsDemoState extends State<ButtonsDemo> {
                       child: Text("FLAT BUTTON"),
                     ),
                   ),
-//icon
+//Icon
                   Padding(
                     padding: const EdgeInsets.all(4.0),
                     child: IconButton(
@@ -81,6 +89,9 @@ class _ButtonsDemoState extends State<ButtonsDemo> {
 //Back
                   new Padding(
                       padding: const EdgeInsets.all(4.0), child: BackButton()),
+//Close
+                  new Padding(
+                      padding: const EdgeInsets.all(4.0), child: CloseButton()),
 //Floating
                   new Padding(
                     padding: const EdgeInsets.all(4.0),
@@ -98,11 +109,12 @@ class _ButtonsDemoState extends State<ButtonsDemo> {
                     padding: const EdgeInsets.all(4.0),
                     child: DropdownButton(
                       // hint: Text("Select"),
-                      // value: _itemValue,
+                      value: _itemValue,
                       items: _items,
                       onChanged: (item) {
                         setState(() {
                           _whichButtonClick = item;
+                          _itemValue = item;
                         });
                       },
                     ),

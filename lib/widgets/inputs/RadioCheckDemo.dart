@@ -11,39 +11,40 @@ class _RadioCheckDemoState extends State<RadioCheckDemo> {
   bool _musicValue = false;
   bool _sportValue = false;
   bool _readingValue = false;
-  String _genderSelection = "MALE";
+  String _genderSelection = "Male";
+  bool _switchValue = true;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Radio | CheckBox"),
+        title: Text("Radio | CheckBox | Switch"),
       ),
       body: Column(children: <Widget>[
         RadioListTile(
-          title: Text("MALE"),
+          title: Text("Male"),
           value: 0,
           groupValue: _groupValue,
           onChanged: (value) {
             setState(() {
               _groupValue = value;
-              _genderSelection = "MALE";
+              _genderSelection = "Male";
             });
           },
         ),
         RadioListTile(
-          title: Text("FEMALE"),
+          title: Text("Female"),
           value: 1,
           groupValue: _groupValue,
           onChanged: (value) {
             setState(() {
               _groupValue = value;
-              _genderSelection = "FEMALE";
+              _genderSelection = "Female";
             });
           },
         ),
         CheckboxListTile(
-          title: Text("MUSIC"),
+          title: Text("Music"),
           value: _musicValue,
           onChanged: (flag) {
             setState(() {
@@ -52,7 +53,7 @@ class _RadioCheckDemoState extends State<RadioCheckDemo> {
           },
         ),
         CheckboxListTile(
-          title: Text("SPORT"),
+          title: Text("Sport"),
           value: _sportValue,
           onChanged: (flag) {
             setState(() {
@@ -61,7 +62,7 @@ class _RadioCheckDemoState extends State<RadioCheckDemo> {
           },
         ),
         CheckboxListTile(
-          title: Text("READING"),
+          title: Text("Reading"),
           value: _readingValue,
           onChanged: (flag) {
             setState(() {
@@ -69,11 +70,21 @@ class _RadioCheckDemoState extends State<RadioCheckDemo> {
             });
           },
         ),
+        SwitchListTile(
+          title: Text("Switch"),
+          value: _switchValue,
+          onChanged: (flag) {
+            setState(() {
+              _switchValue = flag;
+            });
+          },
+        ),
         Text(_genderSelection),
+        Text(_switchValue ? "SWITCH ON" : "SWITCH OFF"),
         Text("Music " + (_musicValue ? " cheked" : " uncheck")),
         Text("Sport " + (_sportValue ? " cheked" : " uncheck")),
         Text("Reading " + (_readingValue ? " cheked" : " uncheck")),
       ]),
     );
-  }
+  }  
 }

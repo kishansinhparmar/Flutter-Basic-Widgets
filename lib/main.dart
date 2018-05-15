@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_basic_widgets/widgets/ContainerDemo.dart';
-import 'package:flutter_basic_widgets/widgets/RowColumnDemo.dart';
-import 'package:flutter_basic_widgets/widgets/RowColumnPro.dart';
+import 'package:flutter_basic_widgets/widgets/positions/ContainerDemo.dart';
+import 'package:flutter_basic_widgets/widgets/positions/RowColumnDemo.dart';
+import 'package:flutter_basic_widgets/widgets/positions/RowColumnPro.dart';
 import 'package:flutter_basic_widgets/widgets/ImageDemo.dart';
-import 'package:flutter_basic_widgets/widgets/TextFieldDemo.dart';
-import 'package:flutter_basic_widgets/widgets/AlignDemo.dart';
-import 'package:flutter_basic_widgets/widgets/IndexedStackDemo.dart';
-import 'package:flutter_basic_widgets/widgets/RadioCheckDemo.dart';
-import 'package:flutter_basic_widgets/widgets/FlexDemo.dart';
-import 'package:flutter_basic_widgets/widgets/BottomTabDemo.dart';
+import 'package:flutter_basic_widgets/widgets/inputs/TextFieldDemo.dart';
+import 'package:flutter_basic_widgets/widgets/positions/AlignDemo.dart';
+import 'package:flutter_basic_widgets/widgets/positions/IndexedStackDemo.dart';
+import 'package:flutter_basic_widgets/widgets/inputs/RadioCheckDemo.dart';
+import 'package:flutter_basic_widgets/widgets/positions/FlexDemo.dart';
+import 'package:flutter_basic_widgets/widgets/tabs/TabsDemo.dart';
+import 'package:flutter_basic_widgets/widgets/tabs/BottomTabDemo.dart';
 import 'package:flutter_basic_widgets/widgets/ExpandableListDemo.dart';
-import 'package:flutter_basic_widgets/widgets/ButtonsDemo.dart';
+import 'package:flutter_basic_widgets/widgets/buttons/ButtonsDemo.dart';
 import 'package:flutter_basic_widgets/bonus/beebom/bhome.dart';
 import 'colors.dart';
 
@@ -40,6 +41,8 @@ class MyApp extends StatelessWidget {
           RadioCheckDemo.routeName: (BuildContext context) =>
               new RadioCheckDemo(),
           FlexDemo.routeName: (BuildContext context) => new FlexDemo(),
+          TabsDemo.routeName: (BuildContext context) =>
+              new TabsDemo(),
           BottomTabDemo.routeName: (BuildContext context) =>
               new BottomTabDemo(),
           ExpandableListDemo.routeName: (BuildContext context) =>

@@ -37,9 +37,27 @@ class _BottomTabDemoState extends State<BottomTabDemo>
         controller: _tabController,
         children: <Widget>[
           //Reuse single class
-          TabClass(Icon(Icons.home)),
-          TabClass(Icon(Icons.explore)),
-          TabClass(Icon(Icons.more_horiz))
+          TabClass(
+              Icon(
+                Icons.home,
+                color: Colors.white,
+                size: 112.0,
+              ),
+              Colors.redAccent),
+          TabClass(
+              Icon(
+                Icons.explore,
+                color: Colors.white,
+                size: 112.0,
+              ),
+              Colors.blueAccent),
+          TabClass(
+              Icon(
+                Icons.more_horiz,
+                color: Colors.white,
+                size: 112.0,
+              ),
+              Colors.greenAccent)
         ],
       ),
       bottomNavigationBar: BottomAppBar(
@@ -90,12 +108,16 @@ _bottomTabs() {
 
 class TabClass extends StatelessWidget {
   final Icon icon;
-  TabClass(this.icon);
+  final Color myColor;
+  TabClass(this.icon, this.myColor);
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: icon,
+    return Container(
+      color: myColor,
+      child: Center(
+        child: icon,
+      ),
     );
   }
 }

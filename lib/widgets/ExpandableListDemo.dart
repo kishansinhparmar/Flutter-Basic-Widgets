@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_basic_widgets/widgets/ContainerDemo.dart';
-import 'package:flutter_basic_widgets/widgets/RowColumnDemo.dart';
-import 'package:flutter_basic_widgets/widgets/RowColumnPro.dart';
+import 'package:flutter_basic_widgets/widgets/positions/ContainerDemo.dart';
+import 'package:flutter_basic_widgets/widgets/positions/RowColumnDemo.dart';
+import 'package:flutter_basic_widgets/widgets/positions/RowColumnPro.dart';
 import 'package:flutter_basic_widgets/widgets/ImageDemo.dart';
-import 'package:flutter_basic_widgets/widgets/TextFieldDemo.dart';
-import 'package:flutter_basic_widgets/widgets/AlignDemo.dart';
-import 'package:flutter_basic_widgets/widgets/IndexedStackDemo.dart';
-import 'package:flutter_basic_widgets/widgets/RadioCheckDemo.dart';
-import 'package:flutter_basic_widgets/widgets/FlexDemo.dart';
-import 'package:flutter_basic_widgets/widgets/BottomTabDemo.dart';
-import 'package:flutter_basic_widgets/widgets/ButtonsDemo.dart';
+import 'package:flutter_basic_widgets/widgets/inputs/TextFieldDemo.dart';
+import 'package:flutter_basic_widgets/widgets/positions/AlignDemo.dart';
+import 'package:flutter_basic_widgets/widgets/positions/IndexedStackDemo.dart';
+import 'package:flutter_basic_widgets/widgets/inputs/RadioCheckDemo.dart';
+import 'package:flutter_basic_widgets/widgets/positions/FlexDemo.dart';
+import 'package:flutter_basic_widgets/widgets/tabs/TabsDemo.dart';
+import 'package:flutter_basic_widgets/widgets/tabs/BottomTabDemo.dart';
+import 'package:flutter_basic_widgets/widgets/buttons/ButtonsDemo.dart';
 import 'package:flutter_basic_widgets/bonus/beebom/bhome.dart';
 
 class ExpandableListDemo extends StatefulWidget {
@@ -50,8 +51,12 @@ final List<Entry> data = <Entry>[
     '',
     <Entry>[
       new Entry('Raised', ButtonsDemo.routeName),
+      new Entry('Outline', ButtonsDemo.routeName),
       new Entry('Flat', ButtonsDemo.routeName),
       new Entry('Icon', ButtonsDemo.routeName),
+      new Entry('Back', ButtonsDemo.routeName),
+      new Entry('FAB', ButtonsDemo.routeName),
+      new Entry('DropdownButton', ButtonsDemo.routeName),
     ],
   ),
   new Entry(
@@ -60,6 +65,7 @@ final List<Entry> data = <Entry>[
     <Entry>[
       new Entry('TextField', TextFieldDemo.routeName),
       new Entry('Radio Checkbox', RadioCheckDemo.routeName),
+      new Entry('Switch', RadioCheckDemo.routeName),
     ],
   ),
   new Entry(
@@ -75,10 +81,17 @@ final List<Entry> data = <Entry>[
     ],
   ),
   new Entry(
-    'Other',
+    'Tabs',
     '',
     <Entry>[
+      new Entry('Tab', TabsDemo.routeName),
       new Entry('BottomTab', BottomTabDemo.routeName),
+    ],
+  ),
+  new Entry(
+    'Others',
+    '',
+    <Entry>[
       new Entry('Image', ImageDemo.routeName),
     ],
   ),
