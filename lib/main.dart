@@ -12,7 +12,7 @@ import 'package:flutter_basic_widgets/widgets/tabs/TabsDemo.dart';
 import 'package:flutter_basic_widgets/widgets/tabs/BottomTabDemo.dart';
 import 'package:flutter_basic_widgets/widgets/ExpandableListDemo.dart';
 import 'package:flutter_basic_widgets/widgets/buttons/ButtonsDemo.dart';
-import 'package:flutter_basic_widgets/bonus/beebom/bhome.dart';
+import 'package:flutter_basic_widgets/bonus/beebom/blogin.dart';
 import 'colors.dart';
 
 void main() => runApp(new MyApp());
@@ -48,7 +48,7 @@ class MyApp extends StatelessWidget {
           ExpandableListDemo.routeName: (BuildContext context) =>
               new ExpandableListDemo(),
           ButtonsDemo.routeName: (BuildContext context) => new ButtonsDemo(),
-          BHome.routeName: (BuildContext context) => new BHome(),
+          BLogin.routeName: (BuildContext context) => new BLogin(),
         },
         home: new ExpandableListDemo());
   }
