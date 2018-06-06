@@ -6,3 +6,6 @@ A new Flutter project.
 
 For help getting started with Flutter, view our online
 [documentation](https://flutter.io/).
+
+## What you get extra on this project
+Custom password visiblity icon over the password textfield.

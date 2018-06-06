@@ -3,6 +3,7 @@ import 'package:flutter_basic_widgets/widgets/positions/ContainerDemo.dart';
 import 'package:flutter_basic_widgets/widgets/positions/RowColumnDemo.dart';
 import 'package:flutter_basic_widgets/widgets/positions/RowColumnPro.dart';
 import 'package:flutter_basic_widgets/widgets/ImageDemo.dart';
+import 'package:flutter_basic_widgets/widgets/AlertsDemo.dart';
 import 'package:flutter_basic_widgets/widgets/inputs/TextFieldDemo.dart';
 import 'package:flutter_basic_widgets/widgets/positions/AlignDemo.dart';
 import 'package:flutter_basic_widgets/widgets/positions/IndexedStackDemo.dart';
@@ -10,8 +11,10 @@ import 'package:flutter_basic_widgets/widgets/inputs/RadioCheckDemo.dart';
 import 'package:flutter_basic_widgets/widgets/positions/FlexDemo.dart';
 import 'package:flutter_basic_widgets/widgets/tabs/TabsDemo.dart';
 import 'package:flutter_basic_widgets/widgets/tabs/BottomTabDemo.dart';
+import 'package:flutter_basic_widgets/widgets/tabs/BottomTabNotch.dart';
 import 'package:flutter_basic_widgets/widgets/buttons/ButtonsDemo.dart';
 import 'package:flutter_basic_widgets/bonus/beebom/blogin.dart';
+import 'package:flutter_basic_widgets/bonus/TajMahal.dart';
 
 class ExpandableListDemo extends StatefulWidget {
   static final String routeName = "/expandabledemo";
@@ -50,13 +53,8 @@ final List<Entry> data = <Entry>[
     'Button Widgets',
     '',
     <Entry>[
-      Entry('Raised', ButtonsDemo.routeName),
-      Entry('Outline', ButtonsDemo.routeName),
-      Entry('Flat', ButtonsDemo.routeName),
-      Entry('Icon', ButtonsDemo.routeName),
-      Entry('Back', ButtonsDemo.routeName),
-      Entry('FAB', ButtonsDemo.routeName),
-      Entry('DropdownButton', ButtonsDemo.routeName),
+      Entry('Raised | Outline | Flat | Icon | Back | FAB | DropdownButton',
+          ButtonsDemo.routeName),
     ],
   ),
   Entry(
@@ -86,6 +84,7 @@ final List<Entry> data = <Entry>[
     <Entry>[
       Entry('Tab', TabsDemo.routeName),
       Entry('BottomTab', BottomTabDemo.routeName),
+      Entry('BottomTabNotch', BottomTabNotch.routeName),
     ],
   ),
   Entry(
@@ -93,13 +92,15 @@ final List<Entry> data = <Entry>[
     '',
     <Entry>[
       Entry('Image', ImageDemo.routeName),
+      Entry('Alert', AlertDemo.routeName),
     ],
   ),
   Entry(
     'Bonus',
     '',
     <Entry>[
-      Entry('Beebom', BLogin.routeName),
+      Entry('Signup', BLogin.routeName),
+      Entry('RowColumnPro', TajMahal.routeName),
     ],
   )
 ];
