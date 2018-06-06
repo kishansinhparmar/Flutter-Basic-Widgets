@@ -62,8 +62,7 @@ final List<Entry> data = <Entry>[
     '',
     <Entry>[
       Entry('TextField', TextFieldDemo.routeName),
-      Entry('Radio Checkbox', RadioCheckDemo.routeName),
-      Entry('Switch', RadioCheckDemo.routeName),
+      Entry('Radio | Checkbox | Switch', RadioCheckDemo.routeName),
     ],
   ),
   Entry(

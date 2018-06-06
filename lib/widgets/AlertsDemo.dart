@@ -7,40 +7,68 @@ class AlertDemo extends StatefulWidget {
 }
 
 class _AlertDemoState extends State<AlertDemo> {
+  String _selectedOption;
+
+  _AlertDemoState() {
+    _selectedOption = "";
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Align(
-        alignment: FractionalOffset.bottomCenter,
-        child: Row(
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             RaisedButton(
               onPressed: () {
-                showDialog(
-                    context: context,
-                    child: SimpleDialog(
-                      title: Text("Choose option"),
-                      children: <Widget>[
-                        SimpleDialogOption(
-                          onPressed: () {
-                            print("Click on Yes");
-                          },
-                          child: const Text("YES"),
-                        ),
-                        SimpleDialogOption(
-                          onPressed: () {
-                            print("Click on No");
-                          },
-                          child: const Text("NO"),
-                        )
-                      ],
-                    ));
+                _askOptions();
               },
               child: Text("Simple"),
+            ),
+            new Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text("Selected option: $_selectedOption"),
             )
           ],
         ),
       ),
     );
+  }
+
+  _askOptions() {
+    showDialog(
+        context: context,
+        child: SimpleDialog(
+          title: Text("Do you still miss your first love?"),
+          children: <Widget>[
+            SimpleDialogOption(
+              onPressed: () {
+                setState(() {
+                  _selectedOption = "Yes";
+                  Navigator.of(context).pop();
+                });
+              },
+              child: const Text("Yes"),
+            ),
+            SimpleDialogOption(
+              onPressed: () {
+                setState(() {
+                  _selectedOption = "No";
+                  Navigator.of(context).pop();
+                });
+              },
+              child: const Text("No"),
+            ),
+            SimpleDialogOption(
+              onPressed: () {
+                setState(() {
+                  _selectedOption = "Not Sure!";
+                  Navigator.of(context).pop();
+                });
+              },
+              child: const Text("Not Sure!"),
+            )
+          ],
+        ));
   }
 }

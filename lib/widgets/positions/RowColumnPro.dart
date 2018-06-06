@@ -7,58 +7,39 @@ class RowColumnProDemo extends StatefulWidget {
 }
 
 class _RowColumnProDemoState extends State<RowColumnProDemo> {
-  int _groupValue = 0;
-  var _axis = MainAxisAlignment.start;
+  MainAxisAlignment _axis;
+
+  _RowColumnProDemoState() {
+    _axis = MainAxisAlignment.end;
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text("mainAxis*.spaceEvenly"),
+          title: Text("mainAxis"),
         ),
-        body: new SafeArea(
-          child: Column(
-            // #Play MainAxisAlignment.center
-            mainAxisAlignment: _axis,
-            children: <Widget>[
-              Column(
-                children: <Widget>[
-                  RadioListTile(
-                    title: Text("start"),
-                    value: 0,
-                    groupValue: _groupValue,
-                    onChanged: (value) {
-                      setState(() {
-                        _groupValue = value;
-                        _axis = MainAxisAlignment.spaceEvenly;
-                      });
-                    },
-                  ),
-                  RadioListTile(
-                    title: Text("end"),
-                    value: 1,
-                    groupValue: _groupValue,
-                    onChanged: (value) {
-                      setState(() {
-                        _groupValue = value;
-                        _axis = MainAxisAlignment.spaceBetween;
-                      });
-                    },
-                  )
-                ],
-              ),
-              Icon(
-                Icons.person_outline,
-                size: 60.0,
-              ),
-              Icon(
-                Icons.person_outline,
-                size: 60.0,
-              ),
-              Icon(
-                Icons.person_outline,
-                size: 60.0,
-              )
-            ],
+        body: SafeArea(
+          child: Container(
+            color: Colors.grey,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisSize: MainAxisSize.max,
+              children: <Widget>[
+                Icon(
+                  Icons.person_outline,
+                  size: 60.0,
+                ),
+                Icon(
+                  Icons.person_outline,
+                  size: 120.0,
+                ),
+                Icon(
+                  Icons.person_outline,
+                  size: 60.0,
+                ),
+              ],
+            ),
           ),
         ));
   }
