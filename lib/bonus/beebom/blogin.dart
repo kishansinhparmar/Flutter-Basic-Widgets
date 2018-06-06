@@ -11,7 +11,8 @@ class _BLoginState extends State<BLogin> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: "Beebom",
+      debugShowCheckedModeBanner: false,
+      title: "SignUp",
       theme: _buildTheme(),
       home: Scaffold(
         body: SafeArea(
@@ -31,11 +32,10 @@ class _BLoginState extends State<BLogin> {
                       Container(
                           width: 100.0,
                           height: 100.0,
-                          child: new Image.network(
-                              "https://i2.wp.com/beebom.com/wp-content/uploads/2012/02/Beebom-Logo-Icon.png?fit=250%2C250&ssl=1")),
+                          child: FlutterLogo()),
                       Padding(
                           padding: const EdgeInsets.all(16.0),
-                          child: Text("Tech that matter"))
+                          child: Text("Everything is widget"))
                     ],
                   ),
                 ),

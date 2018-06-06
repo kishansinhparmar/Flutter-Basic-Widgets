@@ -121,7 +121,11 @@ class _ButtonsDemoState extends State<ButtonsDemo> {
                   ),
                   new Padding(
                       padding: const EdgeInsets.all(4.0),
-                      child: Text(_whichButtonClick + " clicked...")),
+                      child: Text(
+                        _whichButtonClick + " clicked...",
+                        style:
+                            TextStyle(fontSize: 20.0, color: Colors.redAccent),
+                      )),
                 ],
               ),
             ),
