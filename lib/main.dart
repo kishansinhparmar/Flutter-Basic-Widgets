@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_basic_widgets/widgets/positions/ContainerDemo.dart';
 import 'package:flutter_basic_widgets/widgets/positions/RowColumnDemo.dart';
-import 'package:flutter_basic_widgets/widgets/positions/RowColumnPro.dart';
+import 'package:flutter_basic_widgets/widgets/positions/ColumnPro.dart';
 import 'package:flutter_basic_widgets/widgets/ImageDemo.dart';
 import 'package:flutter_basic_widgets/widgets/AlertsDemo.dart';
 import 'package:flutter_basic_widgets/widgets/inputs/TextFieldDemo.dart';
@@ -39,8 +39,8 @@ class MyApp extends StatelessWidget {
               new ContainerDemo(),
           RowColumnDemo.routeName: (BuildContext context) =>
               new RowColumnDemo(),
-          RowColumnProDemo.routeName: (BuildContext context) =>
-              new RowColumnProDemo(),
+          ColumnProDemo.routeName: (BuildContext context) =>
+              new ColumnProDemo(),
           ImageDemo.routeName: (BuildContext context) => new ImageDemo(),
           TextFieldDemo.routeName: (BuildContext context) =>
               new TextFieldDemo(),
