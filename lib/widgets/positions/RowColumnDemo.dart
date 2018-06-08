@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class RowColumnDemo extends StatelessWidget {
-  static final String routeName = "/rowcolumn";
+  static final String routeName = "/rowcolumnDemo";
 
   @override
   Widget build(BuildContext context) {

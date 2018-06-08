@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class TabsDemo extends StatefulWidget {
-  static final String routeName = "/tabsdemo";
+  static final String routeName = "/tabsDemo";
   @override
   _TabsDemoState createState() => new _TabsDemoState();
 }

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class ButtonsDemo extends StatefulWidget {
-  static final String routeName = "/buttonsdemo";
+  static final String routeName = "/buttonsDemo";
   @override
   _ButtonsDemoState createState() => new _ButtonsDemoState();
 }

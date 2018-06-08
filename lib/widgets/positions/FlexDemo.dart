@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class FlexDemo extends StatefulWidget {
-  static final String routeName = "/flexdemo";
+  static final String routeName = "/flexDemo";
   @override
   _FlexDemoState createState() => _FlexDemoState();
 }

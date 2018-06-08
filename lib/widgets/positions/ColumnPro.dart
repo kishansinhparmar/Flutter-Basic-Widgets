@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class ColumnProDemo extends StatefulWidget {
-  static final String routeName = "/columnpro";
+  static final String routeName = "/columnproDemo";
   @override
   _ColumnProDemoState createState() => _ColumnProDemoState();
 }

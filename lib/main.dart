@@ -4,6 +4,7 @@ import 'package:flutter_basic_widgets/widgets/positions/RowColumnDemo.dart';
 import 'package:flutter_basic_widgets/widgets/positions/ColumnPro.dart';
 import 'package:flutter_basic_widgets/widgets/others/ImageDemo.dart';
 import 'package:flutter_basic_widgets/widgets/others/AlertsDemo.dart';
+import 'package:flutter_basic_widgets/widgets/others/GradientDemo.dart';
 // import 'package:flutter_basic_widgets/widgets/others/example.dart';
 import 'package:flutter_basic_widgets/widgets/inputs/TextFieldDemo.dart';
 import 'package:flutter_basic_widgets/widgets/positions/AlignDemo.dart';
@@ -63,6 +64,7 @@ class MyApp extends StatelessWidget {
           TajMahal.routeName: (BuildContext context) => new TajMahal(),
           AlertDemo.routeName: (BuildContext context) => new AlertDemo(),
           // ExampleDemo.routeName: (BuildContext context) => new ExampleDemo(),
+          GradientDemo.routeName: (BuildContext context) => new GradientDemo(),
         },
         home: new ExpandableListDemo());
   }

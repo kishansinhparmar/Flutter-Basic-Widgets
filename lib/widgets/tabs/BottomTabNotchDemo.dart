@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class BottomTabNotchDemo extends StatefulWidget {
-  static final String routeName = "/bottomtabnotch";
+  static final String routeName = "/bottomtabnotchDemo";
   @override
   _BottomTabNotchDemoState createState() => _BottomTabNotchDemoState();
 }

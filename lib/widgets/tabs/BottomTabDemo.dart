@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class BottomTabDemo extends StatefulWidget {
-  static final String routeName = "/bottomtabdemo";
+  static final String routeName = "/bottomtabDemo";
   @override
   _BottomTabDemoState createState() => new _BottomTabDemoState();
 }

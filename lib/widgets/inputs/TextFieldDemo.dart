@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class TextFieldDemo extends StatefulWidget {
-  static final String routeName = "/textField";
+  static final String routeName = "/textFieldDemo";
   @override
   _TextFieldDemoState createState() => _TextFieldDemoState();
 }

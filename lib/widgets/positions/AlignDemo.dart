@@ -1,14 +1,8 @@
 import 'package:flutter/material.dart';
 
-class AlignDemo extends StatefulWidget {
+class AlignDemo extends StatelessWidget {
   static final String routeName = "/alignDemo";
 
-  @override
-  _AlignDemoState createState() => _AlignDemoState();
-}
-
-class _AlignDemoState extends State<AlignDemo> {
-  @override
   Widget build(BuildContext context) {
     return Align(
       alignment: FractionalOffset.centerRight,
