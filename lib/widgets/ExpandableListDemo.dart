@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_basic_widgets/widgets/positions/ContainerDemo.dart';
 import 'package:flutter_basic_widgets/widgets/positions/RowColumnDemo.dart';
 import 'package:flutter_basic_widgets/widgets/positions/ColumnPro.dart';
+import 'package:flutter_basic_widgets/widgets/positions/RowProDemo.dart';
 import 'package:flutter_basic_widgets/widgets/others/ImageDemo.dart';
 import 'package:flutter_basic_widgets/widgets/others/AlertsDemo.dart';
 import 'package:flutter_basic_widgets/widgets/others/GradientDemo.dart';
@@ -76,8 +77,9 @@ final List<Entry> data = <Entry>[
       Entry('Align', AlignDemo.routeName),
       Entry('Indexed', IndexedStackDemo.routeName),
       Entry('Flex', FlexDemo.routeName),
-      Entry('RowColumn', RowColumnDemo.routeName),
+      // Entry('RowColumn', RowColumnDemo.routeName),
       Entry('ColumnPro', ColumnProDemo.routeName),
+      Entry('RowPro', RowProDemo.routeName),
     ],
   ),
   Entry(
