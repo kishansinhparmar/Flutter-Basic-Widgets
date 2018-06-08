@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_basic_widgets/widgets/positions/ContainerDemo.dart';
 import 'package:flutter_basic_widgets/widgets/positions/RowColumnDemo.dart';
 import 'package:flutter_basic_widgets/widgets/positions/ColumnPro.dart';
-import 'package:flutter_basic_widgets/widgets/ImageDemo.dart';
-import 'package:flutter_basic_widgets/widgets/AlertsDemo.dart';
+import 'package:flutter_basic_widgets/widgets/others/ImageDemo.dart';
+import 'package:flutter_basic_widgets/widgets/others/AlertsDemo.dart';
+// import 'package:flutter_basic_widgets/widgets/others/example.dart';
 import 'package:flutter_basic_widgets/widgets/inputs/TextFieldDemo.dart';
 import 'package:flutter_basic_widgets/widgets/positions/AlignDemo.dart';
 import 'package:flutter_basic_widgets/widgets/positions/IndexedStackDemo.dart';
@@ -11,7 +12,7 @@ import 'package:flutter_basic_widgets/widgets/inputs/RadioCheckDemo.dart';
 import 'package:flutter_basic_widgets/widgets/positions/FlexDemo.dart';
 import 'package:flutter_basic_widgets/widgets/tabs/TabsDemo.dart';
 import 'package:flutter_basic_widgets/widgets/tabs/BottomTabDemo.dart';
-import 'package:flutter_basic_widgets/widgets/tabs/BottomTabNotch.dart';
+import 'package:flutter_basic_widgets/widgets/tabs/BottomTabNotchDemo.dart';
 import 'package:flutter_basic_widgets/widgets/buttons/ButtonsDemo.dart';
 import 'package:flutter_basic_widgets/bonus/beebom/blogin.dart';
 import 'package:flutter_basic_widgets/bonus/TajMahal.dart';
@@ -49,6 +50,7 @@ class Entry {
 
 // The entire multilevel list displayed by this app.
 final List<Entry> data = <Entry>[
+  // Entry('Single',ExampleDemo.routeName),
   Entry(
     'Button Widgets',
     '',
@@ -83,7 +85,7 @@ final List<Entry> data = <Entry>[
     <Entry>[
       Entry('Tab', TabsDemo.routeName),
       Entry('BottomTab', BottomTabDemo.routeName),
-      Entry('BottomTabNotch', BottomTabNotch.routeName),
+      Entry('BottomTabNotch', BottomTabNotchDemo.routeName),
     ],
   ),
   Entry(

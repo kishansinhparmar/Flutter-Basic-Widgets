@@ -74,15 +74,15 @@ class _ColumnProDemoState extends State<ColumnProDemo> {
               // mainAxisSize: MainAxisSize.max,
               children: <Widget>[
                 Icon(
-                  Icons.person_outline,
+                  Icons.person,
                   size: 60.0,
                 ),
                 Icon(
-                  Icons.person_outline,
+                  Icons.person,
                   size: 120.0,
                 ),
                 Icon(
-                  Icons.person_outline,
+                  Icons.person,
                   size: 60.0,
                 ),
               ],

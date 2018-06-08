@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
-class BottomTabNotch extends StatefulWidget {
+class BottomTabNotchDemo extends StatefulWidget {
   static final String routeName = "/bottomtabnotch";
   @override
-  _BottomTabNotchState createState() => _BottomTabNotchState();
+  _BottomTabNotchDemoState createState() => _BottomTabNotchDemoState();
 }
 
-class _BottomTabNotchState extends State<BottomTabNotch> {
+class _BottomTabNotchDemoState extends State<BottomTabNotchDemo> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
