@@ -21,4 +21,35 @@
 For help getting started with Flutter, view our online
 [documentation](https://flutter.io/).
 
-![](screenshots/Home.jpg)
+<table>
+	<tr>
+		<td><img src="https://github.com/kishansinhparmar/Flutter-Basic-Widgets/blob/master/screenshots/Home.jpg" width="300">
+		</td>
+		<td><img src="https://github.com/kishansinhparmar/Flutter-Basic-Widgets/blob/master/screenshots/TextFields.jpg" width="300">
+		</td>
+			<td><img src="https://github.com/kishansinhparmar/Flutter-Basic-Widgets/blob/master/screenshots/Buttons.jpg" width="300">
+		</td>
+	</tr>
+	<tr>
+		<td><img src="https://github.com/kishansinhparmar/Flutter-Basic-Widgets/blob/master/screenshots/ColumnPro.jpg" width="300">
+		</td>
+		<td><img src="https://github.com/kishansinhparmar/Flutter-Basic-Widgets/blob/master/screenshots/RowPro.jpg" width="300">
+		</td>
+			<td><img src="https://github.com/kishansinhparmar/Flutter-Basic-Widgets/blob/master/screenshots/Tajmahal.jpg" width="300">
+		</td>
+	</tr>
+	<tr>
+		<td><img src="https://github.com/kishansinhparmar/Flutter-Basic-Widgets/blob/master/screenshots/Tab.jpg" width="300">
+		</td>
+		<td><img src="https://github.com/kishansinhparmar/Flutter-Basic-Widgets/blob/master/screenshots/BottomTab.jpg" width="300">
+		</td>
+			<td><img src="https://github.com/kishansinhparmar/Flutter-Basic-Widgets/blob/master/screenshots/BottomNotch.jpg" width="300">
+		</td>
+	</tr>
+	<tr>
+		<td><img src="https://github.com/kishansinhparmar/Flutter-Basic-Widgets/blob/master/screenshots/Signup.jpg" width="300">
+		</td>
+		<td><img src="https://github.com/kishansinhparmar/Flutter-Basic-Widgets/blob/master/screenshots/Dialog.jpg" width="300">
+		</td>
+	</tr>
+</table>
