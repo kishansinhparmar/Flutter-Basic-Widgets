@@ -1,3 +1,6 @@
+Featured in
+[Flutter Weekly #22](https://us17.campaign-archive.com/?u=c8d8d18b6e2c6316ddc1d48a0&id=2f89f5e24c)
+
 # Flutter Basic Widgets
     Very basic flutter widgets.
 
@@ -17,9 +20,11 @@
     SignUp page with MediaQuery.
 
 ## Getting Started
-
 For help getting started with Flutter, view our online
 [documentation](https://flutter.io/).
+
+## Follow on twitter
+[@imkishansinh](https://twitter.com/imkishansinh)
 
 <table>
 	<tr>
