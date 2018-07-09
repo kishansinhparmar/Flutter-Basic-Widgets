@@ -51,5 +51,7 @@ For help getting started with Flutter, view our online
 		</td>
 		<td><img src="https://github.com/kishansinhparmar/Flutter-Basic-Widgets/blob/master/screenshots/Dialog.jpg" width="250">
 		</td>
+		<td><img src="https://github.com/kishansinhparmar/Flutter-Basic-Widgets/blob/master/screenshots/Calculator.png" width="250">
+        </td>
 	</tr>
 </table>

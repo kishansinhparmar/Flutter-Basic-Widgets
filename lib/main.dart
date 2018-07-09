@@ -1,25 +1,28 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_basic_widgets/widgets/positions/ContainerDemo.dart';
-// import 'package:flutter_basic_widgets/widgets/positions/RowColumnDemo.dart';
-import 'package:flutter_basic_widgets/widgets/positions/ColumnPro.dart';
-import 'package:flutter_basic_widgets/widgets/positions/RowProDemo.dart';
-import 'package:flutter_basic_widgets/widgets/others/ImageDemo.dart';
-import 'package:flutter_basic_widgets/widgets/others/AlertsDemo.dart';
-import 'package:flutter_basic_widgets/widgets/others/GradientDemo.dart';
-// import 'package:flutter_basic_widgets/widgets/others/example.dart';
-import 'package:flutter_basic_widgets/widgets/inputs/TextFieldDemo.dart';
-import 'package:flutter_basic_widgets/widgets/positions/AlignDemo.dart';
-import 'package:flutter_basic_widgets/widgets/positions/IndexedStackDemo.dart';
-import 'package:flutter_basic_widgets/widgets/inputs/RadioCheckDemo.dart';
-import 'package:flutter_basic_widgets/widgets/positions/FlexDemo.dart';
-import 'package:flutter_basic_widgets/widgets/tabs/TabsDemo.dart';
-import 'package:flutter_basic_widgets/widgets/tabs/BottomTabDemo.dart';
-import 'package:flutter_basic_widgets/widgets/tabs/BottomTabNotchDemo.dart';
+import 'package:flutter_basic_widgets/bonus/TajMahal.dart';
+import 'package:flutter_basic_widgets/bonus/beebom/blogin.dart';
+import 'package:flutter_basic_widgets/bonus/calculator/calculator.dart';
 import 'package:flutter_basic_widgets/widgets/ExpandableListDemo.dart';
 import 'package:flutter_basic_widgets/widgets/buttons/ButtonsDemo.dart';
-import 'package:flutter_basic_widgets/bonus/beebom/blogin.dart';
-import 'package:flutter_basic_widgets/bonus/TajMahal.dart';
+import 'package:flutter_basic_widgets/widgets/inputs/RadioCheckDemo.dart';
+import 'package:flutter_basic_widgets/widgets/inputs/TextFieldDemo.dart';
+import 'package:flutter_basic_widgets/widgets/others/AlertsDemo.dart';
+import 'package:flutter_basic_widgets/widgets/others/GradientDemo.dart';
+import 'package:flutter_basic_widgets/widgets/others/ImageDemo.dart';
+import 'package:flutter_basic_widgets/widgets/positions/AlignDemo.dart';
+import 'package:flutter_basic_widgets/widgets/positions/ColumnPro.dart';
+import 'package:flutter_basic_widgets/widgets/positions/ContainerDemo.dart';
+import 'package:flutter_basic_widgets/widgets/positions/FlexDemo.dart';
+import 'package:flutter_basic_widgets/widgets/positions/IndexedStackDemo.dart';
+import 'package:flutter_basic_widgets/widgets/positions/RowProDemo.dart';
+import 'package:flutter_basic_widgets/widgets/tabs/BottomTabDemo.dart';
+import 'package:flutter_basic_widgets/widgets/tabs/BottomTabNotchDemo.dart';
+import 'package:flutter_basic_widgets/widgets/tabs/TabsDemo.dart';
+
 import 'colors.dart';
+// import 'package:flutter_basic_widgets/widgets/positions/RowColumnDemo.dart';
+// import 'package:flutter_basic_widgets/widgets/others/example.dart';
+
 
 void main() => runApp(new MyApp());
 
@@ -64,6 +67,7 @@ Map<String, WidgetBuilder> _getRoutes() {
     AlertDemo.routeName: (BuildContext context) => new AlertDemo(),
     // ExampleDemo.routeName: (BuildContext context) => new ExampleDemo(),
     GradientDemo.routeName: (BuildContext context) => new GradientDemo(),
+    MyCalcDemo.routeName: (BuildContext context) => new MyCalcDemo(),
   };
 }
 
